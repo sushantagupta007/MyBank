@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Balance</title>
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-100">
+    <header class="w-3/4 mx-auto">    
+        <h1 class="text-center text-5xl my-10 uppercase">  
+            My Bank Balance  
+        </h1> 
+    </header>
+    <main class="w-3/4 mx-auto">
+        <section class="grid grid-cols-3 gap-2 w-3/4 mx-auto">
+            <div class="bg-yellow-400 p-10 rounded-2xl"> 
+                <p class="text-white font-semibold text-2xl"> Deposit </p>
+                <p class="text-3xl text-white"> $ <span id="deposit-total"> 00 </span> </p>
+            </div>
+            <div class="bg-red-700 p-10 rounded-2xl"> 
+                <p class="text-white font-semibold text-2xl"> WithDraw </p>
+                <p class="text-3xl text-white"> $ <span id="withdraw-total"> 00</span></p>
+            </div>
+            <div class="bg-yellow-400 p-10 rounded-2xl"> 
+                <p class="text-white font-semibold text-2xl"> Balance </p>
+                <p class="text-3xl text-white"> $ <span id="balance-total"> 1000</span></p>
+            </div>
+        </section>
+        <section class="w-3/4 mx-auto my-5 grid grid-cols-2 gap-2">
+            <div class="bg-purple-300 p-10 rounded-2xl">
+                <p class="mb-5 font-medium text-xl"> Deposit Your Money</p>
+                <input class=" p-4 w-full mb-5 rounded border border-gray-400" id="deposit-money" type="text" placeholder="write $ amoount for deposit money">
+                <button class="bg-yellow-600 text-white w-32 h-8 rounded" id="deposit-btn" type="button" onclick="testClick('deposit-btn')"> Deposit</button>
+            </div>
+            <div class="bg-green-300 p-10 rounded-2xl">
+                <p class="mb-5 font-medium text-xl"> Deposit Your Money</p>
+                <input class=" p-4 mb-5 w-full rounded border border-gray-400" id="withdraw-money" type="text" placeholder="write $ amount for withdraw money">
+                <button class="bg-yellow-600 text-white w-32 h-8 rounded" id="withdraw-btn" type="button" onclick="testClick('withdraw-btn')"> Withdraw</button>
+            </div>
+            
+        </section>
+    </main>
+    <script src="./JS/balance.js"></script>
+</body>
+</html>
